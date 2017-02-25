@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+import arky.api as api
+import arky.core as core
+
+
+api.Account.getAccount("AaWmWXmioRVsjdiqjX1SbCjNuKXPPAckzM")
+keys=core.getKeys("burden hello scout science scatter spy orange joy idea nasty scale few")
+#print (keys.public.hex())
+print ("WIF :", keys.wif)
+print ("Mon adresse ARK :",core.getAddress(keys))
+tx=core.Transaction(amount=100000000, recipientId="AR1LhtKphHSAPdef8vksHWaXYFxLPjDQNU")
+
+tx.sign("burden hello scout science scatter spy orange joy idea nasty scale few")
+print(tx.serialize())
+#print (core.sendTransaction("burden hello scout science scatter spy orange joy idea nasty scale few",tx))

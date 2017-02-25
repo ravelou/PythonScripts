@@ -1,0 +1,37 @@
+class DictionnaireOrdonne():
+	def __init__(self,*arg):
+	"""constructeur de la classe"""
+		self.cles=list()
+		self.valeurs=list()
+
+	def __del__(self):
+	"""destructeur de la classe """
+		del self.cles
+		del self.valeurs
+
+	def __repr__(self):
+	"""affiche la classe quand on tape son nom sous forme de dictionnaire"""
+
+	def __iter__(self):
+	"""iterateur de la classe qui permet de la parcourir"""
+
+	def __next__(self):
+	"""implementation de la fonction permettant le parcours de la classe"""
+
+	def __str__(self):
+	"""permet d'afficher la classe avec print de façon plus jolie"""
+	def __getitem__(self,cle):
+	"""methode executee lorsqu'on tape objet[cle]"""
+
+	def __setitem__(self,cle,valeur):
+	"""methode executee lorsqu'on tape objet[cle] = valeur"""
+
+	def __contains__(self,cle):
+	"""methode qui permet d'utiliser le mot-cle 'in'. Renvoie 'True' ou 'False'"""
+	
+	def __len__(self):
+	"""methode qui permet de connaitre la taille de l'objet"""
+
+	def __additem__(selfo):
+	
+"""""""ee
