@@ -45,9 +45,21 @@ class DictionnaireOrdonne:
 
 	def __getitem__(self,cle):
 		"""methode executee lorsqu'on tape objet[cle]"""
+		try:
+			i=self.cles.index(cle)
+			return self.valeurs[i]
+		except ValueError:
+			print("The key \"{}\" does not exist".format(cle))
+			return None
 
 	def __setitem__(self,cle,valeur):
 		"""methode executee lorsqu'on tape objet[cle] = valeur"""
+		try:
+			i=self.cles.index(cle)
+			self.valeurs[i]=valeur
+		except ValueError:
+			self.cles.append(cle)
+			self.valeurs.append(valeur)
 
 	def __contains__(self,cle):
 		"""methode qui permet d'utiliser le mot-cle 'in'. Renvoie 'True' ou 'False'"""
